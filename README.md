@@ -13,7 +13,7 @@ A production-ready **Whole Exome Sequencing (WES) variant calling pipeline** bui
 
 ```
                      ┌─────────────────────────────────────────────────────┐
-                     │               wes-pipeline workflow                  │
+                     │               wes-pipeline workflow                 │
                      └─────────────────────────────────────────────────────┘
 
   FASTQ (R1 + R2)
@@ -21,7 +21,7 @@ A production-ready **Whole Exome Sequencing (WES) variant calling pipeline** bui
        ▼
   ┌─────────┐     ┌──────────────────────────────────────────────────────────┐
   │  FastQC │ ──► │                    QC REPORT                             │
-  └─────────┘     │  FastQC (raw) ──► fastp ──► MultiQC                     │
+  └─────────┘     │  FastQC (raw) ──► fastp ──► MultiQC                      │
        │          └──────────────────────────────────────────────────────────┘
        ▼
   ┌─────────┐
@@ -35,7 +35,7 @@ A production-ready **Whole Exome Sequencing (WES) variant calling pipeline** bui
        │
        ▼
   ┌──────────────────────┐
-  │ Samtools sort + index │
+  │ Samtools sort + index│
   └──────────────────────┘
        │
        ▼
@@ -66,7 +66,7 @@ A production-ready **Whole Exome Sequencing (WES) variant calling pipeline** bui
        ▼
   ┌─────────────────────────────────────────────────────────────┐
   │  VEP Annotation                                             │
-  │  SIFT · PolyPhen · gnomAD AF · ClinVar · HGVS · Canonical  │
+  │  SIFT · PolyPhen · gnomAD AF · ClinVar · HGVS · Canonical   │
   └─────────────────────────────────────────────────────────────┘
        │
        ▼
@@ -109,7 +109,7 @@ mv nextflow /usr/local/bin/
 ### 2. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/wes-pipeline.git
+git clone https://github.com/lorepaga1996/wes-pipeline.git
 cd wes-pipeline
 ```
 
@@ -224,8 +224,8 @@ results/
 | Trimming            | fastp 0.23.4           | `quay.io/biocontainers/fastp:0.23.4`         |
 | Alignment           | BWA-MEM2 2.2.1         | `quay.io/biocontainers/bwa-mem2:2.2.1`       |
 | Sort/Index          | SAMtools 1.19.2        | `quay.io/biocontainers/samtools:1.19.2`      |
-| MarkDuplicates      | GATK 4.5.0             | `broadinstitute/gatk:4.5.0.0`               |
-| BQSR / HC           | GATK 4.5.0             | `broadinstitute/gatk:4.5.0.0`               |
+| MarkDuplicates      | GATK 4.5.0             | `broadinstitute/gatk:4.5.0.0`                |
+| BQSR / HC           | GATK 4.5.0             | `broadinstitute/gatk:4.5.0.0`                |
 | Annotation          | VEP 111                | `ensemblorg/ensembl-vep:release_111`         |
 | MultiQC             | MultiQC 1.21           | `quay.io/biocontainers/multiqc:1.21`         |
 
