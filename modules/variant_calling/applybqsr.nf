@@ -1,0 +1,1 @@
+include { APPLYBQSR } from './haplotypecaller'

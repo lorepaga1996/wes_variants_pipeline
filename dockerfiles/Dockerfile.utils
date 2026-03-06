@@ -1,0 +1,26 @@
+# Base image for custom scripts and utilities
+FROM python:3.11-slim
+
+LABEL maintainer="<your-email>" \
+      description="WES pipeline utility tools" \
+      version="1.0.0"
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        curl \
+        tabix \
+        bcftools \
+        && rm -rf /var/lib/apt/lists/*
+
+RUN pip install --no-cache-dir \
+        pandas==2.1.4 \
+        numpy==1.26.2 \
+        pysam==0.22.0 \
+        cyvcf2==0.30.28 \
+        jinja2==3.1.2 \
+        click==8.1.7
+
+WORKDIR /opt/pipeline
+COPY bin/ ./bin/
+RUN chmod +x ./bin/*.py
+
+ENV PATH="/opt/pipeline/bin:$PATH"

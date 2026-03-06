@@ -1,0 +1,1 @@
+include { GENOTYPEGVCFS } from './haplotypecaller'

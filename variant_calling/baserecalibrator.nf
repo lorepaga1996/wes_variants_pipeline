@@ -1,0 +1,1 @@
+include { BASERECALIBRATOR } from './haplotypecaller'
