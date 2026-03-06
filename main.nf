@@ -5,8 +5,8 @@ nextflow.enable.dsl=2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     wes-pipeline: Whole Exome Sequencing Variant Calling Pipeline
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Github  : https://github.com/<your-username>/wes-pipeline
-    Author  : <your-name>
+    Github  : https://github.com/lorepaga1996/wes-pipeline
+    Author  : lorepaga1996
     License : MIT
 ----------------------------------------------------------------------------------------
 */
@@ -14,7 +14,7 @@ nextflow.enable.dsl=2
 log.info """\
     ╔══════════════════════════════════════════════╗
     ║           W E S - P I P E L I N E            ║
-    ║   Whole Exome Sequencing Variant Calling      ║
+    ║   Whole Exome Sequencing Variant Calling     ║
     ╚══════════════════════════════════════════════╝
 
     samples     : ${params.samplesheet}
